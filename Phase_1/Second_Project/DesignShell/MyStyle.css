@@ -1,0 +1,41 @@
+body {
+	background-color: #DE8890;
+	margin: auto;
+    
+}
+
+
+
+p {
+	background-color: #71B0F1;
+	color: #0D0D15;
+	border-style: double;
+	border-color: aqua;
+}
+
+table {
+	background-color: #cbf5d6;
+}
+
+nav {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #71ace3;
+}
+
+a {
+	float: left;
+}
+
+a {
+	display: block;
+	color: #011122;
+	margin: 10px;
+	align-content: center;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	text-align: center
+}
