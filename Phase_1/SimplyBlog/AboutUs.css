@@ -1,0 +1,16 @@
+body {
+    font-family: Arial, cursive, sans-serif;
+    margin: 10;
+  }
+  
+  html {
+    box-sizing: border-box;
+  }
+  .about-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #474e5d;
+    color: white;
+  }
+  
+  
