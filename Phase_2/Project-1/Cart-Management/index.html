@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="cart.js"></script>
+    <title>Shopping Cart</title>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <nav class="nav justify-content-lg-end">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class=" nav-link active" href="AboutUs.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class=" nav-link active" href="Contact.html">Contact</a>
+                </li>
+                <li>
+                    <a class="nav-link active" href="Cart.html">Checkout</a>
+                </li>
+                <li>
+                    <a class="fa fa-shopping-cart" style="font-size:36px" href="Cart.html" type="button" class="btn btn-success " id="total"> </a>
+                </li>
+            </nav>
+
+        </ul>
+    </div>
+    <hr />
+
+    <div class="container">
+
+        <h3>Shopping List:</h3>
+        <br>
+        <div class="row mt-lg-auto">
+            <div class="card">
+
+                <img src="images/Item1.jpeg" style="width:100%">
+                <input id="name1" class="h1" value="Hoodie" />
+                <input id="cost" class="h1" value="Total" hidden />
+                <input id="price1" class="text-center" value="69.99" />
+
+                <p><button onclick="addToCart1()">Add to Cart</button></p>
+            </div>
+
+            <div class="card">
+                <img src="images/Item2.jpeg" style="width:100%">
+                <input id="name2" class="h1" value="Shoes" />
+                <input id="price2" class="text-center" value="99.99" />
+
+                <p><button onclick="addToCart2()">Add to Cart</button></p>
+            </div>
+
+            <div class="card">
+                <img src="images/Item3.webp" style="width:100%">
+                <input id="name3" class="h1" value="Jogger" />
+                <input id="price3" class="text-center" value="39.99" />
+
+                <p><button onclick="addToCart3()">Add to Cart</button></p>
+            </div>
+
+        </div>
+        <br><br>
+        <div class="row mt-lg-auto">
+
+            <div class="card">
+                <img src="images/Item4.jpeg" style="width:100%">
+                <input id="name4" class="h1" value="Sweatshrit" />
+                <input id="price4" class="text-center" value="39.99" />
+
+                <p><button onclick="addToCart4()">Add to Cart</button></p>
+            </div>
+
+            <div class="card">
+                <img src="images/Item5.jpeg" style="width:100%">
+                <input id="name5" class="h1" value="Denim Jean" />
+                <input id="price5" class="text-center" value="49.99" />
+
+                <p><button onclick="addToCart5()">Add to Cart</button></p>
+            </div>
+
+            <div class="card">
+                <img src="images/Item6.jpeg" style="width:100%">
+                <input id="name6" class="h1" value="Denim Jacket" />
+                <input id="price6" class="text-center" value="59.99" />
+
+                <p><button onclick="addToCart6()">Add to Cart</button></p>
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+</body>
+</html>

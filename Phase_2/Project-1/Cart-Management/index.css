@@ -1,0 +1,51 @@
+html {
+    box-sizing: border-box;
+  }
+  body {
+    background-color: #d2dfae;
+    color: rgb(14, 4, 4);
+    margin: 10px;
+}
+img{
+  height: 300px;
+  width: 200px;
+}
+  .column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+  }
+  .nav {
+      text-decoration: rgb(243, 239, 239);
+      text-align: left;
+  }
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+  }
+  
+  .price {
+    color: grey;
+    font-size: 22px;
+  }
+  
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  .card button:hover {
+    opacity: 0.7;
+  }
+  
