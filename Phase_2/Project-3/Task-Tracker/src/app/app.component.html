@@ -1,0 +1,58 @@
+<div class="container">
+  <h1 style="text-align: center;">Task Tracker</h1>
+  <hr/>
+  <div layout-gt-sm="column" style="min-width: 350px; max-width: 450px; margin:auto">
+  <form >
+    <div>
+      <mat-form-field>
+      <mat-label>Id</mat-label>
+      <input matId="id"matInput  [(ngModel)]="id"  name="id"/>
+    </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+    <mat-label>Name</mat-label>
+    <input matId="name" matInput  [(ngModel)]="name" id="name" name="name"/>
+  </mat-form-field>
+  </div>
+  
+  <div>
+    <mat-form-field>
+    <mat-label>Task</mat-label>
+    <input matId="task" matInput  [(ngModel)]="task" id="task" name="task"/>
+  </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+    <mat-label>Dead Line (mm/dd/yyyy)</mat-label>
+    <input matId="deadline " matInput  [(ngModel)]="deadline" id="deadline" name="deadline"/>
+  </mat-form-field>
+  </div>
+ <button type="submit" mat-raised-button color="primary" (click)="addTask()">submit</button>
+ <button type="reset" mat-raised-button color="warn">reset</button>
+  </form>
+</div>
+</div>
+<hr/>
+<div layout-gt-sm="column" style="min-width: 350px; max-width: 450px; margin:auto">
+<table class="table" border="1"> <!--I know using border is wrong but we were not allowed to use css for this project and the table was not looking good.-->
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Task</th>
+      <th>Deadline</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor ="let task of collection">
+      <td>{{task.id}}</td>
+      <td>{{task.name}}</td>
+      <td>{{task.task}}</td>
+      <td>{{task.deadline}}</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
