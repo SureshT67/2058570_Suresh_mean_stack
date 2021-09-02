@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <script src ="socket.io/socket.io.js" ></script>
+    <style>
+    #container {
+      width: 800px;
+      margin: 0 auto;
+    }
+    .chat-input {
+      width: 300px;
+      height: 35px;
+      border: solid 1px rgb(8, 8, 8);
+    }
+    .chat-submit {
+      width: 50px;
+      height: 35px;
+      border: solid 1px rgb(104, 102, 102);
+    }
+    .chat-window {
+      height: 300px;
+      width: 400px;
+    }
+    #chatSection {
+      float: left;
+      border: 1px grey solid;
+      border-radius: 10px;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+      <h3>Welcome</h3>
+     <div id="chatSection">
+        <div class="chat-window"></div>
+        <form class="chat-form" id="form">
+          <label class="chat-label">
+            Enter a message:
+            <input type="text" class="chat-input" id="message-input" />
+          </label>
+          <input type="submit" class="chat-submit" value="send" />
+        </form>
+      </div> 
+
+
+<script type="text/javascript">
+                const socket = io("http://localhost:9090");
+                const chat = document.querySelector(".chat-form");
+                const Input = document.querySelector(".chat-input");
+                const chatWindow = document.querySelector(".chat-window");
+
+chat.addEventListener("submit", event => {
+  event.preventDefault()
+  socket.emit("chat", Input.value)
+  Input.value = " ";
+})
+
+const renderMessage = message => {
+  const div = document.createElement("div");
+  div.classList.add("render-message");
+  div.innerText = message
+  chatWindow.appendChild(div);
+}
+
+socket.on("chat", message => {
+  renderMessage(message)
+})
+socket.on("Chat1", msg => {
+  console.log(" Message From Server: ", msg);
+})
+  </script>
+</body>
+</html>
